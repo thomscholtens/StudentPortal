@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_add_portal.view.*
 import kotlinx.android.synthetic.main.portals.view.*
 
-class PortalAdapter(private val portals: List<Portal>, val clickListener: (Portal) -> Unit) :
+class PortalAdapter(private val portals: List<Portal>) :
     RecyclerView.Adapter<PortalAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -37,8 +37,6 @@ class PortalAdapter(private val portals: List<Portal>, val clickListener: (Porta
         fun bind(portal: Portal) {
             itemView.tvTitle.text = portal.name
             itemView.tvUrl.text = portal.url
-
-            itemView.setOnClickListener { clickListener(portal) }
 
         }
 

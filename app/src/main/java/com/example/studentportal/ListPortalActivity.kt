@@ -25,7 +25,7 @@ const val ADD_PORTAL_CODE = 100
 class ListPortalActivity : AppCompatActivity() {
 
     private val portals = arrayListOf<Portal>()
-    private val portalAdapter = PortalAdapter(portals) { portal : Portal -> onPortalClicked(portal) }
+    private val portalAdapter = PortalAdapter(portals)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
